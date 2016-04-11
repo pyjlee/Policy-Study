@@ -1,0 +1,77 @@
+[GROUP]{1}: Group 1
+INSTRUCTIONS: Group 1 instructions
+TEXT: Group 1 text
+COMMENT:  comment c.1 Text - "Select One", 3 options; all fields; fonts; - <b><i><u>bold, italic, and underlined text</b></i></u>
+TITLE: comment c.1 Title - <b><i><u>bold, italic, and underlined text</b></i></u>
+INSTRUCTIONS: comment c.1 Instructions <b><i><u>-</b></i></u><b><i><u> </b></i></u><b><i><u>bold, italic, and underlined text</b></i></u>
+#no 'text' element
+NOTE: comment c.1 Comment Note - <b><i><u>bold, italic, and underlined text</b></i></u>
+ () Option c.1.A Text - <b><i><u>bold, italic, and underlined text</b></i></u>
+NOTE: Option c.1.A note - <b><i><u>bold, italic, and underlined text</b></i></u>
+() Option c.1.B Text - <b><i><u>bold, italic, and underlined text</b></i></u>
+NOTE: Option c.1.B note - <b><i><u>bold, italic, and underlined text</b></i></u>
+() Option c.1.C Text - <b><i><u>bold, italic, and underlined text</b></i></u>
+NOTE: Option c.1.C note - <b><i><u>bold, italic, and underlined text</b></i></u>
+
+[PAGE]: P[PAGE]: age 1.1 title
+INSTRUCTIONS: <b><i><u>page 1.1 instructions</b></i></u><b><i><u> (bold, italic, and underlined text)</b></i></u>
+TEXT: page 1.1 text - <b><i><u>(bold, italic, and underlined text)</b></i></u>
+COMMENT: comment 1.1 Text - "Select Multi", 3 options; all fields;
+INSTRUCTIONS: comment 1.1 Instructions
+[] Option c.1.1.A Text
+NOTE: Option c.1.1.A Text
+[] Option c.1.1.B Text
+Option c.1.1.B Text
+[] Option c.1.1.C Text
+NOTE: Option c.1.1.C Text
+
+
+ID: 1.1
+INSTRUCTIONS: Question 1.1 Instructions - <b><i><u>bold, italic, and underlined text</b></i></u>
+TITLE: Question 1.1 Title - <b><i><u>bold, italic, and underlined text</b></i></u>
+TEXT: Question 1.1 Text - "Select One", 3 options; all fields; fonts; - <b><i><u>bold, italic, and underlined text</b></i></u>
+NOTE: Question 1.1 Note - <b><i><u>bold, italic, and underlined text</b></i></u>
+() Option q.1.1.A Text - <b><i><u>bold, italic, and underlined text</b></i></u>
+NOTE: Option q.1.1.A note - <b>bold</b>, <i>italic</i>, and <u>underlined</u> text
+BNF: BNF for option q.1.1.A
+() Option q.1.1.B Text - <b>bold</b>, <i>italic</i>, and <u>underlined</u> text 
+NOTE: Option q.1.1.B note - <b>bold</b>, <i>italic</i>, and <u>underlined</u> text
+BNF: BNF for option q.1.1.B
+() Option q.1.1.C Text - <b>bold</b>, <i>italic</i>, and <u>underlined</u> text and clone of this full question q.1.1 
+CLONE:q.1.1
+NOTE: Option q.1.1.C note - <b>bold</b>, <i>italic</i>, and <u>underlined</u> text
+BNF: BNF for option q.1.1.C
+
+ID: 1.2
+INSTRUCTIONS: Question 1.2 Instructions
+TITLE: Question 1.2 Title
+TEXT: Question 1.2 Text - "Select Multi", 3 options; all fields;
+NOTE: question-level note for q.1.2
+[] Option q.1.2.A Text
+NOTE: Option q.1.2.A Note 
+BNF: BNF for option q.1.2.A
+[] Option q.1.2.B Text
+NOTE: Option q.1.2.B Note
+BNF: BNF for option q.1.2.B
+[] Option q.1.2.C Text
+NOTE: Option q.1.2.C Note
+BNF: BNF for option q.1.2.C
+RESPONSE_VALIDATION: {required::required}
+ID: 1.4
+INSTRUCTIONS: Question 1.4 Instructions
+TITLE: Question 1.4 Title
+TEXT: Question 1.4 Text - "memo"; all fields; bnf json= insert
+NOTE: Question 1.4 Note
+[MEMO]
+BNF: BNF for option q.1.4; insert memo text: [INSERT]{qref:q.1.4}
+
+ID: 1.5
+INSTRUCTIONS: Question 1.5 Instructions
+TITLE: Question 1.5 Title
+TEXT: Question 1.5 Text - "cloze"; all fields; bnf json= insert
+NOTE: Question 1.5 Note: check insert separator in multi-select 1.5.d -- [INSERT]{qref:q.1.5.d; separator:";"} 
+Question 1.5 response text [NUMERICAL] [TEXTBOX] [|option 1|option2|option 3|]{default:option (single) list}[:option 1:option2:option 3:]{default::option (multi) list;;required::required;; invalid_text:: pick one}[MEMO]{required::required;; invalid_text:: enter something}
+BNF: BNF for option q.1.5; insert cloze: [INSERT]{qref:q.1.5.a} [INSERT]{qref:q.1.5.b} [INSERT]{qref:q.1.5.c} [INSERT]{qref:q.1.5.d; separator: "," } [INSERT]{qref:q.1.5.e}
+NOTE: 1.5 Response-level note
+
+

@@ -1,0 +1,11 @@
+
+
+2. Convert insert to xml
+[INSERT]{qref: q.4.6.4}
+{"insert": {"qref": "q.4.6.4"}}
+And were modified to: {"insert": {"qref": "q.4.6.4", "mod": {"q.4.6.4.D": "Special Characters: {'insert':{'qref': 'q.4.6.4.D.a'}}",
+
+<note type="json">(select all that apply) &lt;br&gt; The following were selected: {"insert": {"qref": "q.4.6.4"}} &lt;br&gt; And were modified to: {"insert": {"qref": "q.4.6.4", "mod": {"q.4.6.4.D": "Special Characters: {'insert':{'qref': 'q.4.6.4.D.a'}}", "q.4.6.4.E": "Numbers", "q.4.6.4.B": "Lowercase letters", "q.4.6.4.C": "Letters", "q.4.6.4.A": "Uppercase letters"}}}</note>
+
+
+
